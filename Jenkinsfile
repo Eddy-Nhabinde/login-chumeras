@@ -2,11 +2,9 @@ pipeline{
     agent any
 
     stages {
-        stage ('Build Image') {
+        stage ('Reniciando') {
             steps {
-               script {
-                    dockerapp = docker.build("neliochume/login-chumeras:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
-               } 
+                echo 'Iniciando a pipeline'
             }
         }
     }
